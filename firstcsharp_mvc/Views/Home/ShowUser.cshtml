@@ -1,0 +1,13 @@
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunIndex">Index</a>
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunNumbers">Numbers</a>
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunUsers">Users</a>
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunUser">User</a>
+<br>
+@{
+    ViewData["Title"] = "YOU CREATED A USER";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+@model string
+
+<strong>String:</strong> @Model

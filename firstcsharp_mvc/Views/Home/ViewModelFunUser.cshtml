@@ -1,0 +1,16 @@
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunIndex">Index</a>
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunNumbers">Numbers</a>
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunUsers">Users</a>
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunUser">User</a>
+<br>
+@{
+    ViewData["Title"] = "Title - from ViewModelFun.cshtml ... HERE IS A MESSAGE";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+@model firstcsharp_mvc.Models.UserModel
+
+<h1>ViewModel Fun User Page ... in ViewModelFun.cshtml</h1>
+
+<h2><strong>Name:</strong> @Model.Name</h2>
+<h2><strong>Email:</strong> @Model.Email</h2>

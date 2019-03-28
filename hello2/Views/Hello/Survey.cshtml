@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Survey Exercise</title>
+        <!-- // In this context '~' refers to the wwwroot folder -->
+        <link rel="stylesheet" href="~/css/style.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <a href="/">HOME</a>
+
+        <form action="survey/add" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" value="">
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <select class="form-control" id="location" name="location">
+                    <option selected value="seattle">Seattle</option>
+                    <option value="renton">Renton</option>
+                    <option value="bothell">Bothell</option>
+                    <option value="tukwila">Tukwila</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="language">Language:</label>
+                <select class="form-control" id="language" name="language">
+                    <option selected value="esperanto">Esperanto</option>
+                    <option value="csharp">C#</option>
+                    <option value="python">Python</option>
+                    <option value="typescript">TypeScript</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea class="form-control" rows="5" id="comment" name="comment" value=""></textarea>
+            </div>
+            <div class="btn-group" role="group" aria-label="Survey Buttons">
+                <button type="submit" class="btn btn-primary" name="add">Submit</button>
+            </div>
+        </form>
+
+
+
+
+
+    </body>
+</html>

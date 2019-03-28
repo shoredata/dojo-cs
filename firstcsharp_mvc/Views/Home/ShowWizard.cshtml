@@ -1,0 +1,14 @@
+<a asp-area="" asp-controller="Home" asp-action="WizardRegForm">New Wizard</a>
+<br>
+@{
+    ViewData["Title"] = "Title - from ViewModelFun.cshtml ... HERE IS A MESSAGE";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+@model firstcsharp_mvc.Models.HogwartsStudentModel
+
+<h1>You Just Created a Wizard!</h1>
+
+<h2><strong>Name:</strong> @Model.Name</h2>
+<h2><strong>House:</strong> @Model.House</h2>
+<h2><strong>Current Year:</strong> @Model.CurrentYear</h2>

@@ -1,0 +1,20 @@
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunIndex">Index</a>
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunNumbers">Numbers</a>
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunUsers">Users</a>
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunUser">User</a>
+<br>
+@{
+    ViewData["Title"] = "Title - from ViewModelFun.cshtml ... HERE IS A MESSAGE";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+@model int[]
+
+<h1>ViewModel Fun Numbers Page ... in ViewModelFun.cshtml</h1>
+
+@for (int i = 0; i < Model.Length; i++)
+{
+    <strong>@Model[i]:</strong>
+    @Html.TextBoxFor(x => Model[i]) <br/>
+}
+

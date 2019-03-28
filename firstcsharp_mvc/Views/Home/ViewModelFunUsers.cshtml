@@ -1,0 +1,20 @@
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunIndex">Index</a>
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunNumbers">Numbers</a>
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunUsers">Users</a>
+<a asp-area="" asp-controller="Home" asp-action="ViewModelFunUser">User</a>
+<br>
+@{
+    ViewData["Title"] = "Title - from ViewModelFun.cshtml ... HERE IS A MESSAGE";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+@model List<firstcsharp_mvc.Models.UserModel>
+
+<h1>ViewModel Fun Users Page ... in ViewModelFun.cshtml</h1>
+
+@for (int i = 0; i < Model.Count; i++) {
+    @Html.LabelFor(x => Model[i].Name) @Html.TextBoxFor(x => Model[i].Name) <br/>
+    @Html.LabelFor(x => Model[i].Email) @Html.TextBoxFor(x => Model[i].Email) <br/>
+}
+<brt><br>
+<strong>Note: They all share the same email address ... blah something SMITH.</strong>

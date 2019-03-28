@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Razor Exercise</title>
+        <!-- // In this context '~' refers to the wwwroot folder -->
+        <link rel="stylesheet" href="~/css/style.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <a href="/">HOME</a>
+
+        <h2>Razor View Engine Exercise</h2>
+
+        @{
+            var StringList = new List<string>{
+                "one",
+                "two",
+                "three",
+                "four"
+            };
+            foreach(var word in StringList) {
+                // We can render HTML from within C# code!
+                if (word[0]=='t') {
+                    <p style="color:red">@word</p>
+                }
+                else {
+                    <p>@word</p>
+                }
+                
+            }
+        }
+
+        <br><br>
+
+        @foreach(var word in StringList) {
+            <div>
+                <p>@word</p>
+                @if(word.Length < 4) {
+                    <p>@word is a short word</p>
+                }
+            </div>
+        }
+        <br>
+
+
+    </body>
+</html>
